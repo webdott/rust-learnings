@@ -5,19 +5,19 @@
 //
 // Notes:
 // * Use a function to display your first name
-// * Use a function to display your last name
-// * Use the println macro to display messages to the terminal
-
-
 fn display_first_name() -> &'static str {
     return "Uchechukwu";
 }
-
+// * Use a function to display your last name
 fn display_last_name() -> &'static str {
     return "Nwafor";
 }
-
+// * Use the println macro to display messages to the terminal
 fn main() {
     println!("My name is {:?} {:?}", display_first_name(), display_last_name());
 }
+
+
+
+
 
