@@ -10,5 +10,13 @@
 // * Use a match expression to determine which message to display
 // * Use an underscore (_) to match on any value
 
-fn main() {}
+fn main() {
+    let integer = 10;
+
+    match integer {
+        5 => println!("You finally guessed the number!"),
+        _ => println!("That's not the number, try again!")
+    }
+
+}
 
