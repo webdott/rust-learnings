@@ -7,13 +7,13 @@
 // Notes:
 
 // * Use a function that returns a tuple
-fn return_tuple(x: i32, y:i32) -> (i32, i32) {
+fn coordinate(x: i32, y:i32) -> (i32, i32) {
     (x, y)
 }
 
 fn main() {
     // * Destructure the return value into two variables
-    let (_, y) = return_tuple(5, 5);
+    let (_, y) = coordinate(5, 5);
     
     // * Use an if..else if..else block to determine what to print
     if y > 5 {
