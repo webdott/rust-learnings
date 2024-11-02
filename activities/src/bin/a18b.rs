@@ -49,7 +49,7 @@ struct Database;
 impl Database {
     fn connect() -> Result<Self, String> {
         // In a production application, a database connection error is likely to occur here.
-        Ok(Database)
+        Ok(Self)
     }
 
     fn find_employee(&self, name: &str) -> Result<Employee, String> {
@@ -92,11 +92,24 @@ enum AuthorizationStatus {
     Deny,
 }
 
+
 fn authorize(
     employee_name: &str,
     location: ProtectedLocation,
 ) -> Result<AuthorizationStatus, String> {
-    // put your code here
+    let db = Database::connect()?;
+
+    let employee = Database::find_employee(&db, employee_name)?;
+   
+    let key_card = Database::get_keycard(&db, &employee)?;
+
+    let level = location.required_access_level();
+
+    if key_card.access_level >= level {
+        Ok(AuthorizationStatus::Allow)
+    } else {
+        Ok(AuthorizationStatus::Deny)
+    }
 }
 
 fn main() {
