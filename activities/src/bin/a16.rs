@@ -15,7 +15,7 @@ struct Student {
 fn main() {
     let created_student = Student {
         name: String::from("Uchechukwu"),
-        locker: Some(24)
+        locker: None
     };
     
     // * Print out the details of a student's locker assignment
