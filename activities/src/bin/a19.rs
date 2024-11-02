@@ -27,7 +27,11 @@ fn main() {
     let mut total_items_count = 0;
 
     for (name, number) in hashmap.iter() {
-        println!("Name: {name:?}, ItemCount: {number:?}");
+        match number {
+            0 => println!("Name: {name:?}, Qty: Out of Stock"),
+            _ => println!("Name: {name:?}, Qty: {number:?}")
+        }
+        
 
         total_items_count = total_items_count + number
     }
