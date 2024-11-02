@@ -32,7 +32,6 @@ fn main() {
             _ => println!("Name: {name:?}, Qty: {number:?}")
         }
         
-
         total_items_count = total_items_count + number
     }
 
