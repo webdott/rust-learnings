@@ -1,0 +1,1 @@
+/Users/webdot_30/Desktop/Projects.nosync/TestsandTutorials/rust-learning/minigrep/target/debug/libminigrep.rlib: /Users/webdot_30/Desktop/Projects.nosync/TestsandTutorials/rust-learning/minigrep/src/lib.rs
